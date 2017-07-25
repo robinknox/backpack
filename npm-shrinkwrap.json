@@ -12170,7 +12170,7 @@
     },
     "wrapper-webpack-plugin": {
       "version": "1.0.0",
-      "from": "wrapper-webpack-plugin@>=1.0.0 <2.0.0",
+      "from": "https://registry.npmjs.org/wrapper-webpack-plugin/-/wrapper-webpack-plugin-1.0.0.tgz",
       "resolved": "https://registry.npmjs.org/wrapper-webpack-plugin/-/wrapper-webpack-plugin-1.0.0.tgz",
       "dev": true
     },
