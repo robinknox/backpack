@@ -37,13 +37,14 @@ module.exports = (opts = {}) => {
     if (file.isBuffer()) {
       const query = `?${JSON.stringify({
         jsx: true,
-        svgo: opts,
+        svgo: opts.svgo,
+        styleProp: opts.styleProp,
       })}`;
 
       return loader.apply({
         query,
-        cacheable() {},
-        addDependency() {},
+        cacheable() { },
+        addDependency() { },
         async() {
           return (err, result) => {
             if (err) {
