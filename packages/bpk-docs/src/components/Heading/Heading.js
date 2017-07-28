@@ -16,21 +16,101 @@
  * limitations under the License.
  */
 import PropTypes from 'prop-types';
-import BpkText, { withTextStyle } from 'bpk-component-text';
+import BpkText from 'bpk-component-text';
 
-import { cssModules } from 'bpk-react-utils';
+import { cssModules, withDefaultProps } from 'bpk-react-utils';
 
 import STYLES from './Heading.scss';
 
 const getClassName = cssModules(STYLES);
 
 const HEADINGS = {
-  h1: withTextStyle(BpkText, 'xxl', 'h1', ['bpk-docs-heading', 'bpk-docs-heading--h1'].map(getClassName).join(' ')),
-  h2: withTextStyle(BpkText, 'xl', 'h2', ['bpk-docs-heading', 'bpk-docs-heading--h2'].map(getClassName).join(' ')),
-  h3: withTextStyle(BpkText, 'lg', 'h3', ['bpk-docs-heading', 'bpk-docs-heading--h3'].map(getClassName).join(' ')),
-  h4: withTextStyle(BpkText, 'base', 'h4', ['bpk-docs-heading', 'bpk-docs-heading--h4'].map(getClassName).join(' ')),
-  h5: withTextStyle(BpkText, 'base', 'h5', ['bpk-docs-heading', 'bpk-docs-heading--h5'].map(getClassName).join(' ')),
-  h6: withTextStyle(BpkText, 'base', 'h6', ['bpk-docs-heading', 'bpk-docs-heading--h6'].map(getClassName).join(' ')),
+  h1: {
+    mobile: withDefaultProps(
+      BpkText,
+      {
+        textStyle: 'xl',
+        tagName: 'h1',
+        className: ['bpk-docs-heading', 'bpk-docs-heading--h1'].map(getClassName).join(' '),
+      },
+    ),
+    other: withDefaultProps(
+      BpkText,
+      {
+        textStyle: 'xxl',
+        tagName: 'h1',
+        className: ['bpk-docs-heading', 'bpk-docs-heading--h1'].map(getClassName).join(' '),
+      },
+    ),
+  },
+  h2: {
+    mobile: withDefaultProps(
+      BpkText,
+      {
+        textStyle: 'lg',
+        tagName: 'h2',
+        className: ['bpk-docs-heading', 'bpk-docs-heading--h2'].map(getClassName).join(' '),
+      },
+    ),
+    other: withDefaultProps(
+      BpkText, 'xl', 'h2', ['bpk-docs-heading', 'bpk-docs-heading--h2'].map(getClassName).join(' '),
+    ),
+  },
+  h3: {
+    mobile: withDefaultProps(
+      BpkText,
+      {
+        textStyle: 'base',
+        tagName: 'h3',
+        className: ['bpk-docs-heading', 'bpk-docs-heading--h3'].map(getClassName).join(' '),
+      },
+    ),
+    other: withDefaultProps(
+      BpkText,
+      {
+        textStyle: 'lg',
+        tagName: 'h3',
+        className: ['bpk-docs-heading', 'bpk-docs-heading--h3'].map(getClassName).join(' '),
+      },
+    ),
+  },
+  h3: {
+    mobile: withDefaultProps(
+      BpkText,
+      {
+        textStyle: 'base',
+        tagName: 'h3',
+        className: ['bpk-docs-heading', 'bpk-docs-heading--h3'].map(getClassName).join(' '),
+      },
+    ),
+    other: withDefaultProps(
+      BpkText,
+      {
+        textStyle: 'base',
+        tagName: 'h3',
+        className: ['bpk-docs-heading', 'bpk-docs-heading--h3'].map(getClassName).join(' '),
+      },
+    ),
+  },
+  h3: {
+    mobile: withDefaultProps(
+      BpkText, 'base', 'h3', ['bpk-docs-heading', 'bpk-docs-heading--h3'].map(getClassName).join(' '),
+    ),
+    other: withDefaultProps(
+      BpkText, 'lg', 'h3', ['bpk-docs-heading', 'bpk-docs-heading--h3'].map(getClassName).join(' '),
+    ),
+  },
+  h3: {
+    mobile: withDefaultProps(
+      BpkText, 'base', 'h3', ['bpk-docs-heading', 'bpk-docs-heading--h3'].map(getClassName).join(' '),
+    ),
+    other: withDefaultProps(
+      BpkText, 'lg', 'h3', ['bpk-docs-heading', 'bpk-docs-heading--h3'].map(getClassName).join(' '),
+    ),
+  },
+  h4: withDefaultProps(BpkText, 'base', 'h4', ['bpk-docs-heading', 'bpk-docs-heading--h4'].map(getClassName).join(' ')),
+  h5: withDefaultProps(BpkText, 'base', 'h5', ['bpk-docs-heading', 'bpk-docs-heading--h5'].map(getClassName).join(' ')),
+  h6: withDefaultProps(BpkText, 'base', 'h6', ['bpk-docs-heading', 'bpk-docs-heading--h6'].map(getClassName).join(' ')),
 };
 
 const Heading = (props) => {
