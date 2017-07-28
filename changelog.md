@@ -3,6 +3,9 @@
 ## UNRELEASED
 
 _Nothing yet_
+**Added:**
+- bpk-react-utils:
+  - Added `withDefaultProp` HOC to simplify using the same component with the same props in many places.
 
 ## 2017-07-28 - New Text component and mixins
 
