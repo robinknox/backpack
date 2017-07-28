@@ -51,7 +51,6 @@ describe('withTextStyle', () => {
   it('should pass on all classNames', () => {
     const Heading1 = withTextStyle(BpkText, 'xxl', 'h1', 'my-custom-class');
 
-
     const tree = renderer.create(
       <Heading1 className="my-other-custom-class">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
